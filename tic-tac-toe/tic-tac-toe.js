@@ -1,3 +1,11 @@
+//Add readline module to allow user to interact with js in the terminal
+const readline = require('readline')
+
+const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+})
+
 //Represent the board with and array with 9 positions
 const board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
 
