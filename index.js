@@ -76,6 +76,7 @@ const playGame = () => {
         console.log(computerChoice)
         console.log(determineWinner(userChoice, computerChoice))
         rl.close
+        process.exit()
     })
 }
 
