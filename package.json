@@ -17,6 +17,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "rps": "node rps/rps.js",
-    "8ball": "node 8ball/8ball.js"
+    "8ball": "node 8ball/8ball.js",
+    "ttt": "node tic-tac-toe/tic-tac-toe.js"
   }
 }
