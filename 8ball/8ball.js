@@ -1,5 +1,16 @@
 //Magic 8 ball game
 
+//Make use of readline module built in to Node
+const readline = require('readline')
+
+const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+})
+
+//Becaues rl.question is asynchronous, to turn collection of usernam and question into functions
+//you must use promises combined with async/await when you call it later
+
 //Add operator to collect name of user
 let userName = "";
 userName ? console.log(`Hello ${userName}`) : console.log("Hello!");
