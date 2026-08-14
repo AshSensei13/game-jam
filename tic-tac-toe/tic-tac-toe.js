@@ -37,12 +37,16 @@ async function testGame() {
   while (true) {
     const move = await getPlayerMove();
 
-    board[move - 1] = currentPlayer;
+    if (board[move - 1] === " ") {
+        //valid move
+        board[move - 1] = currentPlayer;
+        //switch player
+        currentPlayer = currentPlayer === "X" ? "O" : "X";
+    } else {
+        //invalid move
+        console.log("That position is already taken!");
+    }
     displayBoard();
-    currentPlayer = currentPlayer === "X" ? "O" : "X";
-
-    
-
   }
   rl.close;
   process.exit();
