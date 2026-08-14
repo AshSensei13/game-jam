@@ -16,7 +16,17 @@ This game is run using Nodes built-in readline module and a simple script that c
 # Magic Eight Ball Game
 Users can find out the future with this magic eight ball game. Users can type their name and any yes or no question that they want to know for their future and the magic 8 ball will tell you your fate!
 
-This game is run using Nodes built-in readline module and a simple script that can be found at 8ball.js
+This game is run using Nodes built-in readline module and a simple script that can be found at 8ball.js.
 
 ## Running Magic Eight ball
 - To run type `npm run 8ball` in terminal.
+
+<br>
+
+# Tic-Tac-Toe Game
+Users can play in this two player game of tic-tac-toe.
+
+This game is run using Nodes built-in readline module and a script that can be found at tic-tac-toe.js.
+
+## Running Tic-Tac-Toe
+- To run type `npm run ttt` in terminal
