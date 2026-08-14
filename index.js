@@ -53,3 +53,14 @@ const determineWinner = (userChoice, computerChoice) => {
         return 'The Human wins by cheating!'
     }
 }
+
+//Create function to play the game
+const playGame = () => {
+    let userChoice = getUserChoice('rock')
+    console.log(userChoice)
+    let computerChoice = getComputerChoice()
+    console.log(computerChoice)
+    console.log(determineWinner(userChoice, computerChoice))
+}
+
+playGame()
