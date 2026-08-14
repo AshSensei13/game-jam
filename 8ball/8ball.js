@@ -61,3 +61,21 @@ const getEightBallAnswer = () => {
   }
   return eightBall;
 };
+
+//Create an async function that takes in promises from userName and userQuestion
+//playGame function uses await to ensure that user inputs something before running to next line
+async function playGame() {
+    
+    const userName = await getUserName()
+    console.log(`Hello ${userName}!`);
+    
+    const userQuestion = await getUserQuestion()
+    console.log(`${userName} asked: ${userQuestion}`);
+
+    const answer = getEightBallAnswer()
+    console.log(`${answer}`);
+
+    rl.close
+}
+
+playGame()
