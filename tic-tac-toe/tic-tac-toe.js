@@ -55,6 +55,7 @@ const checkWinner = () => {
             return board[a]
         }
     }
+    return null
 }
 
 //create testGame function to simulate gameplay mechanics step by step
@@ -68,6 +69,16 @@ async function testGame() {
     if (board[move - 1] === " ") {
         //valid move
         board[move - 1] = currentPlayer;
+
+        //after updating board check if there is a winner
+        //if(winner) is truthy if "X" or "O" and falsy if null
+        const winner = checkWinner();
+        if (winner) {
+            console.log(`${winner} wins!`);
+            displayBoard()
+            break
+        }
+
         //switch player
         currentPlayer = currentPlayer === "X" ? "O" : "X";
     } else {
