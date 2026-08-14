@@ -29,6 +29,34 @@ const getPlayerMove = () => {
     })
 }
 
+//Create function to check if there is a winner
+const winningCombinations = [
+    [0,1,2],[3,4,5],[6,7,8],
+    [0,3,6],[1,4,7],[2,5,8],
+    [0,4,8],[2,4,6]
+]
+
+const checkWinner = () => {
+    //Loop through the winning combination array which contains arrays
+    for(let i = 0; i < winningCombinations.length; i++) {
+        //assign combination to one of the winning arrays
+        const combination = winningCombinations[i]
+        //assign variables a, b, and c to the position of each element in winning array
+        const a = combination[0]
+        const b = combination[1]
+        const c = combination[2]
+
+        //check if the winning positions match to the board
+        if (
+            board[a] !== " " &&
+            board[a] === board[b] &&
+            board[b] === board[c]
+        ) {
+            return board[a]
+        }
+    }
+}
+
 //create testGame function to simulate gameplay mechanics step by step
 async function testGame() {
   let currentPlayer = "X";
