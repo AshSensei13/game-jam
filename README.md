@@ -7,5 +7,5 @@ Users can play rock paper scissors against the computer inside the terminal. Use
 This game is run using Nodes built in readline module and a simple script that can be found at index.js.
 
 ## Running Rock, Paper, Scissors, Bomb!
-Change directory to rps folder `cd rps`
-To run type `npm run rps` in terminal.
+- Change directory to rps folder `cd rps`
+- To run type `npm run rps` in terminal.
