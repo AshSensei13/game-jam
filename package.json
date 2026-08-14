@@ -1,0 +1,21 @@
+{
+  "name": "game-jam",
+  "version": "1.0.0",
+  "description": "This repository is a collection of games made to be played directly in the CLI of your computer!",
+  "homepage": "https://github.com/AshSensei13/game-jam#readme",
+  "bugs": {
+    "url": "https://github.com/AshSensei13/game-jam/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AshSensei13/game-jam.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "rps": "node index.js"
+  }
+}
