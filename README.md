@@ -29,4 +29,4 @@ Users can play in this two player game of tic-tac-toe. Players select position 1
 This game is run using Nodes built-in readline module and a script that can be found at tic-tac-toe.js.
 
 ## Running Tic-Tac-Toe
-- To run type `npm run ttt` in terminal
+- To run type `npm run ttt` in terminal.
