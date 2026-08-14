@@ -37,9 +37,12 @@ async function testGame() {
   while (true) {
     const move = await getPlayerMove();
 
-    board[move] = "X";
-    currentPlayer = currentPlayer === "X" ? "O" : "X";
+    board[move - 1] = currentPlayer;
     displayBoard();
+    currentPlayer = currentPlayer === "X" ? "O" : "X";
+
+    
+
   }
   rl.close;
   process.exit();
