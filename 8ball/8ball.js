@@ -76,6 +76,7 @@ async function playGame() {
     console.log(`${answer}`);
 
     rl.close
+    process.exit()
 }
 
 playGame()
