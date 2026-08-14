@@ -19,8 +19,8 @@ const displayBoard = () => {
     ${board[6]} | ${board[7]} | ${board[8]}    
     `)
 }
-displayBoard()
 
+//Create function that asks user to select a position in the terminal
 const getPlayerMove = () => {
     return new Promise((resolve) => {
         rl.question("Choose a position (1-9): ", (answer) => {
@@ -28,3 +28,16 @@ const getPlayerMove = () => {
         })
     })
 }
+
+//create testGame function to simulate gameplay mechanics step by step
+async function testGame() {
+    displayBoard()
+    
+    const move = await getPlayerMove()
+
+    console.log(`You chose position ${move}`);
+    rl.close
+    process.exit()
+}
+
+testGame()
