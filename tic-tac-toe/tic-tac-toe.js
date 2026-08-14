@@ -58,8 +58,8 @@ const checkWinner = () => {
     return null
 }
 
-//create testGame function to simulate gameplay mechanics step by step
-async function testGame() {
+//create playGame function taking in all the functions built to play tic-tac-toe
+async function playGame() {
   let currentPlayer = "X";
 
   while (true) {
@@ -77,6 +77,14 @@ async function testGame() {
             displayBoard()
             console.log(`${winner} wins!`);
             break
+        //If there is no winner check if the board is completely full
+        } else {
+            //every() checks every element in board and returns true if there is no more " "
+            if (board.every(position => position !== " ")){
+                displayBoard()
+                console.log("It's a draw!");
+                break
+            }
         }
 
         //switch player
@@ -90,4 +98,4 @@ async function testGame() {
   process.exit();
 }
 
-testGame()
+playGame()
