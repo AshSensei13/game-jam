@@ -22,3 +22,34 @@ const getComputerChoice = () => {
         break
     }
 }
+
+//Create function to find a winner given both inputs
+const determineWinner = (userChoice, computerChoice) => {
+    if (userChoice === computerChoice) {
+        return 'Tie game.'
+    }
+    if (userChoice === 'rock') {
+        if (computerChoice === 'paper') {
+            return 'The Computer wins.'
+        } else {
+            return 'The Human wins.'
+        }
+    }
+    if (userChoice === 'paper') {
+        if (computerChoice === 'scissors') {
+            return 'The Computer wins.'
+        } else {
+            return 'The Human wins.'
+        }
+    }
+    if (userChoice === 'scissors') {
+        if (computerChoice === 'rock') {
+            return 'The Computer wins.'
+        } else {
+            return 'The Human wins.'
+        }
+    }
+    if (userChoice === 'bomb') {
+        return 'The Human wins by cheating!'
+    }
+}
