@@ -38,3 +38,5 @@ switch (randomNumber) {
     eightBall = "Signs point to yes";
     break;
 }
+
+console.log(eightBall);
