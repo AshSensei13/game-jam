@@ -10,6 +10,7 @@ const rl = readline.createInterface({
 
 //Becaues rl.question is asynchronous, to turn collection of usernam and question into functions
 //you must use promises combined with async/await when you call it later
+//resolve is how you tell the promise that the operation has finished and provide its result
 
 //Create function to get user name by making it return a Promise
 const getUserName = () => {
