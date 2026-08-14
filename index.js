@@ -1,5 +1,13 @@
 //Rock Paper Scissors Game
 
+//Utilise nodes built-in readline module to allow users to type in terminal
+const readline = require('readline')
+
+const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+})
+
 //Create function for users choice]
 const getUserChoice = userInput => {
     userInput = userInput.toLowerCase()
@@ -55,12 +63,20 @@ const determineWinner = (userChoice, computerChoice) => {
 }
 
 //Create function to play the game
+//use readline module and question method to take userInput
 const playGame = () => {
-    let userChoice = getUserChoice('rock')
-    console.log(userChoice)
-    let computerChoice = getComputerChoice()
-    console.log(computerChoice)
-    console.log(determineWinner(userChoice, computerChoice))
+    rl.question('Choose rock, paper, scissors or bomb: ', (answer) => {
+        let userChoice = getUserChoice(answer)
+        if (!userChoice) {
+            rl.close()
+            return
+        }
+        console.log(userChoice)
+        let computerChoice = getComputerChoice()
+        console.log(computerChoice)
+        console.log(determineWinner(userChoice, computerChoice))
+        rl.close
+    })
 }
 
 playGame()
