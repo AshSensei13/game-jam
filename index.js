@@ -71,9 +71,9 @@ const playGame = () => {
             rl.close()
             return
         }
-        console.log(userChoice)
+        console.log('You chose:', userChoice)
         let computerChoice = getComputerChoice()
-        console.log(computerChoice)
+        console.log('Computer chose:', computerChoice)
         console.log(determineWinner(userChoice, computerChoice))
         rl.close
         process.exit()
