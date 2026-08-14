@@ -31,13 +31,18 @@ const getPlayerMove = () => {
 
 //create testGame function to simulate gameplay mechanics step by step
 async function testGame() {
-    displayBoard()
-    
-    const move = await getPlayerMove()
+  let currentPlayer = "X";
+  displayBoard();
 
-    console.log(`You chose position ${move}`);
-    rl.close
-    process.exit()
+  while (true) {
+    const move = await getPlayerMove();
+
+    board[move] = "X";
+    currentPlayer = currentPlayer === "X" ? "O" : "X";
+    displayBoard();
+  }
+  rl.close;
+  process.exit();
 }
 
 testGame()
