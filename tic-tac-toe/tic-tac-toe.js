@@ -20,3 +20,11 @@ const displayBoard = () => {
     `)
 }
 displayBoard()
+
+const getPlayerMove = () => {
+    return new Promise((resolve) => {
+        rl.question("Choose a position (1-9): ", (answer) => {
+            resolve(answer)
+        })
+    })
+}
