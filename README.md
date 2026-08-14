@@ -24,7 +24,7 @@ This game is run using Nodes built-in readline module and a simple script that c
 <br>
 
 # Tic-Tac-Toe Game
-Users can play in this two player game of tic-tac-toe.
+Users can play in this two player game of tic-tac-toe. Players select position 1-9 and the terminal will display 3x3 grid with either "X" or "O". See if you can outsmart your opponent with this game!
 
 This game is run using Nodes built-in readline module and a script that can be found at tic-tac-toe.js.
 
