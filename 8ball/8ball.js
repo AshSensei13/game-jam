@@ -11,13 +11,23 @@ const rl = readline.createInterface({
 //Becaues rl.question is asynchronous, to turn collection of usernam and question into functions
 //you must use promises combined with async/await when you call it later
 
-//Add operator to collect name of user
-let userName = "";
-userName ? console.log(`Hello ${userName}`) : console.log("Hello!");
+//Create function to get user name by making it return a Promise
+const getUserName = () => {
+    return new Promise((resolve) => {
+        rl.question('What is your name? ', (userName) => {
+            resolve(userName)
+        })
+    })
+}
 
-//Added userQuestion variable
-let userQuestion = "Am I a good programmer?";
-console.log(`${userName} asked ${userQuestion}`);
+//Create function to get user question by making it return a Promise
+const getUserQuestion = () => {
+    return new Promise((resolve) => {
+        rl.question('What is your question? ', (userQuestion) => {
+            resolve(userQuestion)
+        })
+    })
+}
 
 //Create a function that generates the 8ball answers
 const getEightBallAnswer = () => {
