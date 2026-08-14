@@ -1,6 +1,8 @@
 # game-jam
 This repository is a collection of games made to be played directly in the CLI of your computer!
 
+To clone this repository use `git clone {SSH}` using your SSH link found by clicking the green "Code" button at the top of the repository.
+
 # Rock Paper Scissors or BOMB!
 Users can play rock paper scissors against the computer inside the terminal. Users can type either rock, paper or scissors to see if they can win. Or they can type bomb to win instantly!
 
