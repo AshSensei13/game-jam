@@ -61,9 +61,9 @@ const checkWinner = () => {
 //create testGame function to simulate gameplay mechanics step by step
 async function testGame() {
   let currentPlayer = "X";
-  displayBoard();
 
   while (true) {
+    displayBoard();
     const move = await getPlayerMove();
 
     if (board[move - 1] === " ") {
@@ -74,8 +74,8 @@ async function testGame() {
         //if(winner) is truthy if "X" or "O" and falsy if null
         const winner = checkWinner();
         if (winner) {
-            console.log(`${winner} wins!`);
             displayBoard()
+            console.log(`${winner} wins!`);
             break
         }
 
@@ -85,7 +85,6 @@ async function testGame() {
         //invalid move
         console.log("That position is already taken!");
     }
-    displayBoard();
   }
   rl.close;
   process.exit();
